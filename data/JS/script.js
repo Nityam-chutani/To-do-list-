@@ -35,7 +35,7 @@ class todo {
                     data.push(value);
                     fs.writeFile(
                         filepath,
-                        JSON.stringify(data),//converti json string into javascript object 
+                        JSON.stringify(data),//convert json string into javascript object 
                         (err) => {
                             if (err) return reject(err.message);
                             resolve(`${value.name} task added `);
@@ -59,7 +59,7 @@ class todo {
                     data = JSON.parse(data);
 
                 }
-
+               //helps to filter data or delete the data
                 data = data.filter(element =>
                     element.id !== id
                 )
